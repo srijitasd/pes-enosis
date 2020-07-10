@@ -4,7 +4,7 @@ gsap.fromTo(".mainlogo", {y: "-1.5vw",
                             {y: "0vw",
                     opacity: 1,
                 duration: 0.7,
-            delay: 0.5}
+            delay: 0.7}
                             )
 
 gsap.fromTo(".logoText", {x: "-3vw",
@@ -13,5 +13,5 @@ gsap.fromTo(".logoText", {x: "-3vw",
                             {x: "0vw",
                     opacity: 1,
                 duration: 0.7,
-            delay: 0.6}
+            delay: 0.8}
                             )
