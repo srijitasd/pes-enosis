@@ -1,8 +1,7 @@
 /*  index
 
     1. common variables
-    2. preloader
-    3. header
+    2. header
     
     index end */
 
@@ -19,76 +18,7 @@ body   {
 
 /* common variables end */
 
-/* 2. preloader */
-#preloader {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    background-image: radial-gradient(50% 50% at 50% 50%, #0077ff, #001233);
-}
-
-.ball {
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/soccer.svg");
-    background-size: cover;
-    animation: roll .6s linear infinite;
-}
-
-.box {
-    margin: 0 auto;
-    width: 100px;
-    height: 240px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.box .shadow {
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background-color: #001233;
-    bottom: 0;
-    border-radius: 100%;
-    transform: scaleX(0.8);
-    opacity: .6;
-    animation: shadowScale 1s linear infinite;
-}
-
-.gravity {
-    width: 100px;
-    height: 100px;
-    animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
-}
-
-@media only screen and (orientation: portrait) {
-    #preloader {
-        background-image: radial-gradient(50% 50% at 50% 50%, #025abe, #022d7e);
-    }
-}
-
-@keyframes roll {
-    100% {
-    transform: rotate(360deg);
-    }
-}
-@keyframes bounce {
-    50% {
-    transform: translateY(140px);
-    }
-}
-@keyframes shadowScale {
-    50% {
-    transform: scaleX(1);
-    opacity: .8;
-    }
-}
-/* prelaoder end */
-
-/* 3. header */
+/* 2. header */
 .header-box {
     display: grid;
     height: 100vh;
