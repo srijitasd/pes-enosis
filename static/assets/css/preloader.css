@@ -10,8 +10,6 @@
 .ball {
     width: 100px;
     height: 100px;
-    background-image: url("../images/soccer.svg");
-    background-size: cover;
     animation: roll .6s linear infinite;
 }
 
