@@ -9,7 +9,6 @@ body   {
 }
 
 @media only screen and (min-width:426px){
-
     .navbox   {
         width: 100vw;
         position: absolute;
@@ -22,14 +21,18 @@ body   {
        width: 100vw;
    }
 
-   .mainlogo   {
+   .mainlogo, .logo-background {
     position: absolute;
     top: -1vw;
     left: 2vw;
     padding-top: 0vw;
     padding-left: 10vw;
     height: 40vw;
-}
+    }
+
+    .logo-background {
+        opacity: 0.2;
+    }
 
     .logoText  {
     position: absolute;
