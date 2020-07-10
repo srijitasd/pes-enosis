@@ -1,5 +1,5 @@
 $(window).on('load', function () {
-    // $('#preloader').hide("slow");
+    $('#preloader').hide("slow");
     LandingLogoAnimation();
 });
 LandingLogoAnimation = ()=> {
