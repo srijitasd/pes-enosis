@@ -1,4 +1,4 @@
-*    {
+*{
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -22,52 +22,113 @@ body   {
    }
 
    .mainlogo, .logo-background {
-    position: absolute;
-    top: -1vw;
-    left: 2vw;
-    padding-top: 0vw;
-    padding-left: 10vw;
-    height: 40vw;
-    }
-
-    .logo-background {
-        opacity: 0.2;
+        opacity: 0;
+        position: absolute;
+        top: -1vw;
+        left: 2vw;
+        padding-top: 0vw;
+        padding-left: 10vw;
+        height: 40vw;
     }
 
     .logoText  {
-    position: absolute;
-    top: -1vw;
-    left: 0;
-    padding: 12.5vw 0vw 0vw 14.5vw;
-    height: 39vw;
-    width: 40vw;
+        opacity: 0;
+        position: absolute;
+        top: -1vw;
+        left: 0;
+        padding: 12.5vw 0vw 0vw 14.5vw;
+        height: 39vw;
+        width: 40vw;
     }
 
 }
 
 @media only screen and (max-width:425px){
 
-    .navbox   {
+    .navbox {
         width: 100vw;
         top: 0vw;
-   }
+    }
 
-   .mainlogo   {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 2vw;
-    padding-left: 10vw;
-    height: 40vw;
-}
+   .mainlogo, .logo-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 2vw;
+        padding-left: 10vw;
+        height: 40vw;
+    }
 
-.logoText  {
-    position: absolute;
-    top: -1vw;
-    left: 0;
-    padding: 13vw 0vw 0vw 12vw;
-    height: 44vw;
-    width: 42vw;
+    .logoText  {
+        position: absolute;
+        top: -1vw;
+        left: 0;
+        padding: 13vw 0vw 0vw 12vw;
+        height: 44vw;
+        width: 42vw;
     }
 
 }
+
+/* preloader */
+#preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: radial-gradient(50% 50% at 50% 50%, #066fe7, #033eaa);
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/soccer.svg");
+    background-size: cover;
+    animation: roll .6s linear infinite;
+}
+
+.box {
+    margin: 0 auto;
+    width: 100px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box .shadow {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #001233;
+    bottom: 0;
+    border-radius: 100%;
+    transform: scaleX(0.8);
+    opacity: .6;
+    animation: shadowScale 1s linear infinite;
+}
+
+.gravity {
+    width: 100px;
+    height: 100px;
+    animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+
+@keyframes roll {
+    100% {
+    transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    50% {
+    transform: translateY(140px);
+    }
+}
+@keyframes shadowScale {
+    50% {
+    transform: scaleX(1);
+    opacity: .8;
+    }
+}
+/* prelaoder end */
