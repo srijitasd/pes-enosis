@@ -1,0 +1,70 @@
+*    {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body   {
+    background-color: #CAF0F8;
+}
+
+@media only screen and (min-width:426px){
+
+    .navbox   {
+        width: 100vw;
+        position: absolute;
+        top: -6vw;
+   }
+
+   .logo-container    {
+       position: absolute;
+       height: 100vh;
+       width: 100vw;
+   }
+
+   .mainlogo   {
+    position: absolute;
+    top: -1vw;
+    left: 2vw;
+    padding-top: 0vw;
+    padding-left: 10vw;
+    height: 40vw;
+}
+
+    .logoText  {
+    position: absolute;
+    top: -1vw;
+    left: 0;
+    padding: 12.5vw 0vw 0vw 14.5vw;
+    height: 39vw;
+    width: 40vw;
+    }
+
+}
+
+@media only screen and (max-width:425px){
+
+    .navbox   {
+        width: 100vw;
+        top: 0vw;
+   }
+
+   .mainlogo   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 2vw;
+    padding-left: 10vw;
+    height: 40vw;
+}
+
+.logoText  {
+    position: absolute;
+    top: -1vw;
+    left: 0;
+    padding: 13vw 0vw 0vw 12vw;
+    height: 44vw;
+    width: 42vw;
+    }
+
+}
