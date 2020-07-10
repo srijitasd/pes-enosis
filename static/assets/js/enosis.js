@@ -32,7 +32,7 @@ LandingLogoAnimation = ()=> {
             opacity: 0,
         },
         {
-            x: "0vw",
+            x: "12px",
             opacity: 1,
             duration: 0.7,
             delay: 0.8

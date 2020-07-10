@@ -1,3 +1,12 @@
+/*  index
+
+    1. common variables
+    2. preloader
+    3. header
+    
+    index end */
+
+/* 1. common variables */
 *{
     margin: 0;
     padding: 0;
@@ -8,75 +17,15 @@ body   {
     background-color: #CAF0F8;
 }
 
-@media only screen and (min-width:426px){
-    .navbox   {
-        width: 100vw;
-        position: absolute;
-        top: -6vw;
-   }
+/* common variables end */
 
-   .logo-container    {
-       position: absolute;
-       height: 100vh;
-       width: 100vw;
-   }
-
-   .mainlogo, .logo-background {
-        opacity: 0;
-        position: absolute;
-        top: -1vw;
-        left: 2vw;
-        padding-top: 0vw;
-        padding-left: 10vw;
-        height: 40vw;
-    }
-
-    .logoText  {
-        opacity: 0;
-        position: absolute;
-        top: -1vw;
-        left: 0;
-        padding: 12.5vw 0vw 0vw 14.5vw;
-        height: 39vw;
-        width: 40vw;
-    }
-
-}
-
-@media only screen and (max-width:425px){
-
-    .navbox {
-        width: 100vw;
-        top: 0vw;
-    }
-
-   .mainlogo, .logo-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top: 2vw;
-        padding-left: 10vw;
-        height: 40vw;
-    }
-
-    .logoText  {
-        position: absolute;
-        top: -1vw;
-        left: 0;
-        padding: 13vw 0vw 0vw 12vw;
-        height: 44vw;
-        width: 42vw;
-    }
-
-}
-
-/* preloader */
+/* 2. preloader */
 #preloader {
     position: absolute;
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    background-image: radial-gradient(50% 50% at 50% 50%, #066fe7, #033eaa);
+    background-image: radial-gradient(50% 50% at 50% 50%, #0077ff, #001233);
 }
 
 .ball {
@@ -94,7 +43,7 @@ body   {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
 }
 
 .box .shadow {
@@ -115,6 +64,12 @@ body   {
     animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
 }
 
+@media only screen and (orientation: portrait) {
+    #preloader {
+        background-image: radial-gradient(50% 50% at 50% 50%, #025abe, #022d7e);
+    }
+}
+
 @keyframes roll {
     100% {
     transform: rotate(360deg);
@@ -132,3 +87,50 @@ body   {
     }
 }
 /* prelaoder end */
+
+/* 3. header */
+.header-box {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 11fr;
+    grid-template-columns: 4fr 2fr;
+    background-image: url('../images/headerbox.png');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+}
+.logo-container {
+    grid-row: 1/3 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainlogo, .logo-background, .logoText {
+    opacity: 0;
+    position: absolute;
+    width: 60vh;
+}
+
+@media only screen and (orientation: portrait) {
+    .header-box {
+        height: 50vh;
+        background-image: url('../images/headerbox-min.png');
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 2fr;
+    }
+
+    .logo-container {
+        grid-row: 2/3 ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainlogo, .logo-background, .logoText {
+       width: 40vw;
+       height: 40vw;
+    }
+}
+
+/* 3. header end */
