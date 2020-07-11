@@ -21,7 +21,7 @@ LandingLogoAnimation = ()=> {
     },
     {
         y: "0vw",
-        opacity: 0.2,
+        opacity: 1,
         duration: 1,
         delay: 0.7
     }
