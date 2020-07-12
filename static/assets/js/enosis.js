@@ -62,6 +62,18 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
             translateY: "-2.4vh",
             rotateZ: -45
          })
+         gsap.to(".nav-box", {
+            top: "0vh",
+            duration: 1,
+            ease: "expo.out",
+        })
+        gsap.to(".nav-links", {
+            opacity: 1,
+            delay: 0.4,
+            left: "0vw",
+            stagger: 0.2,
+            duration: 0.6
+        })
     }
 
 
@@ -79,6 +91,17 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
              rotateZ: "0deg",
              translateY: 0
           })
+        gsap.to(".nav-box", {
+            top: "-100vh",
+            duration: 0.8,
+            delay: 0.6
+        })
+        gsap.to(".nav-links", {
+            opacity: 0,
+            left: "-4vw",
+            stagger: 0.1,
+            duration: 0.3
+        })
     }
 
 })
@@ -107,6 +130,16 @@ if ($(window).width() <= 571) {
                 translateY: "-1.8vh",
                 rotateZ: -45
              })
+            gsap.to(".nav-box", {
+                top: "0vh"
+            })
+            gsap.to(".nav-links", {
+                opacity: 1,
+                delay: 0.4,
+                left: "0vw",
+                stagger: 0.2,
+                duration: 0.6
+            })
         }
     
     
@@ -124,6 +157,17 @@ if ($(window).width() <= 571) {
                  rotateZ: "0deg",
                  translateY: 0
               })
+              gsap.to(".nav-box", {
+                top: "-100vh",
+                duration: 1,
+                delay: 0.6
+            })
+            gsap.to(".nav-links", {
+                opacity: 0,
+                left: "-4vw",
+                stagger: 0.1,
+                duration: 0.3
+            })
         }
     
     })
