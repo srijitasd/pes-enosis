@@ -22,13 +22,36 @@ body   {
 .header-box {
     display: grid;
     height: 100vh;
-    grid-template-rows: 1fr 11fr;
+    grid-template-rows: 1.5fr 11fr;
     grid-template-columns: 4fr 2fr;
     background-image: url('../images/headerbox.png');
     background-position: center;
     background-size: cover;
     width: 100vw;
 }
+
+.hamburger-menu   {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.hamburger-container   {
+    display: grid;
+    grid-column: 2/3;
+    justify-items: center;
+    align-items: center;
+    align-items: flex-end;
+    margin-top: 2vw;
+}
+
+.hamburger-handle   {
+    background-color: white;
+    height: 1.5vh;
+    width: 6vw;
+    border-radius: 1vw;
+    opacity: 0.9;
+}
+
 .logo-container {
     grid-row: 1/3 ;
     display: flex;
@@ -48,6 +71,33 @@ body   {
         background-image: url('../images/headerbox-min.png');
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 2fr;
+    }
+
+    .hamburger-menu   {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .hamburger-container   {
+        display: grid;
+        grid-column: 3/4;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .hamburger-handle   {
+        background-color: white;
+        height: 1vh;
+        width: 10vw;
+        border-radius: 0.5vw;
+    }
+
+    .handle-rotate1   {
+        align-self: flex-end;
+    }
+
+    .handle-rotate2  {
+        align-self: flex-start;
     }
 
     .logo-container {
