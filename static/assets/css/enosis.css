@@ -30,6 +30,8 @@ body   {
     width: 100vw;
 }
 
+/* 2.1 hamburger menu starts */
+
 .hamburger-menu   {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -51,6 +53,8 @@ body   {
     border-radius: 1vw;
     opacity: 0.9;
 }
+
+/* 2.1 hamburger menu ends */
 
 .logo-container {
     grid-row: 1/3 ;
