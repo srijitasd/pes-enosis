@@ -34,24 +34,31 @@ body   {
 
 .hamburger-menu   {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " . hamburger-container";
 }
 
 .hamburger-container   {
+    grid-area: hamburger-container;
     display: grid;
-    grid-column: 2/3;
-    justify-items: center;
     align-items: center;
-    align-items: flex-end;
-    margin-top: 2vw;
+    grid-template-columns: 1fr;
 }
 
 .hamburger-handle   {
+    height: 4px;
+    width: 38px;
     background-color: white;
-    height: 1.5vh;
-    width: 6vw;
-    border-radius: 1vw;
-    opacity: 0.9;
+    justify-self: center;
+    border-radius: 2vw;
+}
+
+.handle-bar1  {
+    align-self: flex-end;
+}
+
+.handle-bar3  {
+    align-self: flex-start;
 }
 
 /* 2.1 hamburger menu ends */
@@ -79,29 +86,7 @@ body   {
 
     .hamburger-menu   {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-
-    .hamburger-container   {
-        display: grid;
-        grid-column: 3/4;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .hamburger-handle   {
-        background-color: white;
-        height: 1vh;
-        width: 10vw;
-        border-radius: 0.5vw;
-    }
-
-    .handle-rotate1   {
-        align-self: flex-end;
-    }
-
-    .handle-rotate2  {
-        align-self: flex-start;
+        grid-template-columns: 3fr 1fr;
     }
 
     .logo-container {
