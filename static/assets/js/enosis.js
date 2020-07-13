@@ -1,3 +1,6 @@
+ /* pre-loader js starts */
+
+
 $(window).on('load', function () {
     $('#preloader').hide("slow");
     LandingLogoAnimation();
@@ -40,8 +43,19 @@ LandingLogoAnimation = ()=> {
     )
 }
 
+ /* pre-loader js ends */
+
+
+  /* global variables */
+
 var hamburger  = document.querySelector(".hamburger-container");
 var socialBox = document.querySelector(".game-box-activator");
+
+ /* global variables ends */
+
+
+ /* hamburger animation starts */
+
 
 if ($(window).width() > 571) {
     
@@ -116,6 +130,10 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
 
 })
 
+ /* hamburger animation for pc ends */
+
+       /* social-box animation for pc starts */
+
 socialBox.addEventListener("click", function(){
     socialBox.classList.toggle("active");
     if (socialBox.classList.contains("active")) {
@@ -142,7 +160,12 @@ socialBox.addEventListener("click", function(){
     }
 })
 
+      /* social-box animation for pc ends */
+
 }
+
+
+ /* hamburger animation for mobile starts */
 
 
 if ($(window).width() <= 571) {
@@ -155,7 +178,7 @@ if ($(window).width() <= 571) {
         if (hamburger.classList.contains("active")) {
             gsap.to(".handle-bar1", {
                rotateZ: 45,
-               translateY: "2.2vh"
+               translateY: "1.9vh"
             })
     
             gsap.to(".handle-bar2", {
@@ -163,7 +186,7 @@ if ($(window).width() <= 571) {
             })
     
             gsap.to(".handle-bar3", {
-                translateY: "-2.2vh",
+                translateY: "-1.9vh",
                 rotateZ: -45
              })
             gsap.to(".nav-box", {
@@ -216,6 +239,12 @@ if ($(window).width() <= 571) {
     
     })
 
+
+     /* hamburger animation for mobile starts */
+
+
+      /* social-box animation for mobile starts */
+
 socialBox.addEventListener("click", function(){
     socialBox.classList.toggle("active");
     if (socialBox.classList.contains("active")) {
@@ -241,6 +270,8 @@ socialBox.addEventListener("click", function(){
         })
     }
 })
+
+      /* social-box animation for mobile ends */
     
     }
     

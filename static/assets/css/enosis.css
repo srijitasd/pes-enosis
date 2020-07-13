@@ -9,11 +9,11 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 body   {
     background-color: #CAF0F8;
+    height: 1000vw;
 }
 
 /* common variables end */
@@ -23,7 +23,9 @@ body   {
     display: grid;
     height: 100vh;
     grid-template-rows: 1.5fr 11fr;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas: ". logo-container hamburger"
+                         "side-nav logo-container social-box ";
     background-image: url('../images/headerbox.png');
     background-position: center;
     background-size: cover;
@@ -33,6 +35,7 @@ body   {
 /* 2.1 hamburger menu starts */
 
 .hamburger-menu   {
+    grid-area: hamburger;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: " . hamburger-container";
@@ -76,7 +79,7 @@ body   {
     background-position: center;
     background-size: cover;
     grid-gap: 1vw;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 1fr 3fr 1fr;
     grid-template-areas: ". . ."
                          "nav-logo-container nav-list ."
@@ -89,10 +92,12 @@ body   {
     grid-gap: 2vw;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .nav-list li   {
     align-self: center;
+    text-decoration: none;
 }
 
 .nav-list li a  {
@@ -131,6 +136,7 @@ body   {
 
 .social-box  {
     display: flex;
+    grid-area: social-box;
     justify-content: flex-end;
     align-items: flex-end;
 }
@@ -143,6 +149,7 @@ body   {
     flex-direction: column;
     border-radius: 50%;
     margin: 3vw 3vw 2.5vw 2.5vw;
+    overflow: hidden;
 }
 
 .game-box-activator  {
@@ -167,6 +174,7 @@ body   {
 
 .logo-container {
     grid-row: 1/3 ;
+    grid-area: logo-container;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,20 +186,47 @@ body   {
     width: 60vh;
 }
 
+/* nav-side-bar starts */
+
+.side-nav-container  {
+    grid-area: side-nav;
+    position: relative;
+}
+
+.nav-side-bar   {
+    height: 10vw;
+    width: 3vw;
+    background-color: red;
+    position: sticky;
+    left: 3vw;
+    background-image: url(/static/assets/images/nav-side-bar.svg);
+    background-size: 100% 100%;
+}
+
 @media only screen and (orientation: portrait) {
     .header-box {
         height: 56vh;
         background-image: url('../images/headerbox-min.png');
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 5fr;
+        grid-template-areas: ". logo-container hamburger-container"
+                             "side-nav logo-container social-box";
     }
+
+    /* 2.1 hamburger menu starts */
 
     .hamburger-menu   {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-area: hamburger-container;
+        grid-template-columns: 1fr 4fr;
     }
 
+    /* 2.1 hamburger menu ends */
+
+    /* 2.2 navbox menu starts */
+
     .nav-box  {
+        grid-template-columns: 1.5fr 2fr 1.5fr;
         background-image: url('../images/headerbox-min.png');
         height: 56vh;
     }
@@ -204,6 +239,8 @@ body   {
         font-size: 5.2vw;
     }
 
+    /* 2.2 navbox menu ends */
+
     .logo-container {
         grid-row: 2/3 ;
         display: flex;
@@ -214,6 +251,12 @@ body   {
     .mainlogo, .logo-background, .logoText {
        width: 40vw;
        height: 40vw;
+    }
+
+    /* 2.3 social-box menu starts */
+
+    .social-box  {
+        grid-area: social-box;
     }
 
     .game-box   {
@@ -239,6 +282,18 @@ body   {
         height: 8vw;
         width: 8vw;
     }
+     /* 2.3 social-box menu ends */
+
+     .logo-container  {
+         grid-area: logo-container;
+     }
+
+
+     .nav-side-bar  {
+         width: 7vw;
+         height: 15vh;
+     }
+
 }
 
 /* 3. header end */
