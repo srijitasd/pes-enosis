@@ -106,8 +106,36 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
 
 })
 
-}
 
+
+var socialBox = document.querySelector(".game-box-activator");
+
+socialBox.addEventListener("click", function(){
+    socialBox.classList.toggle("active");
+    if (socialBox.classList.contains("active")) {
+        gsap.to(".game-box", {
+            height: "20vw",
+            borderRadius: "3vw"
+        })
+
+        gsap.to(".game-box-activator", {
+            opacity: 0,
+            duration: 0.1
+        })
+    }
+
+    else  {
+        gsap.to(".game-box", {
+            height: "5vw",
+        })
+        gsap.to(".game-box-activator", {
+            opacity: 1,
+            duration: 0.1
+        })
+    }
+})
+
+}
 
 
 if ($(window).width() <= 571) {
@@ -171,6 +199,33 @@ if ($(window).width() <= 571) {
         }
     
     })
+
+    var socialBox = document.querySelector(".game-box-activator");
+
+socialBox.addEventListener("click", function(){
+    socialBox.classList.toggle("active");
+    if (socialBox.classList.contains("active")) {
+        gsap.to(".game-box", {
+            height: "32vw",
+            borderRadius: "5vw"
+        })
+
+        gsap.to(".game-box-activator", {
+            opacity: 0,
+            duration: 0.1
+        })
+    }
+
+    else  {
+        gsap.to(".game-box", {
+            height: "8vw",
+        })
+        gsap.to(".game-box-activator", {
+            opacity: 1,
+            duration: 0.1
+        })
+    }
+})
     
     }
     
