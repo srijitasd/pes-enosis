@@ -155,7 +155,7 @@ if ($(window).width() <= 571) {
             })
     
             gsap.to(".handle-bar3", {
-                translateY: "-2.3vh",
+                translateY: "-2.2vh",
                 rotateZ: -45
              })
             gsap.to(".nav-box", {
