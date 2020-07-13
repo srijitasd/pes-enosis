@@ -41,13 +41,15 @@ LandingLogoAnimation = ()=> {
 }
 
 var hamburger  = document.querySelector(".hamburger-container");
+var socialBox = document.querySelector(".game-box-activator");
 
 if ($(window).width() > 571) {
-
-    var hamburger  = document.querySelector(".hamburger-container");
     
 hamburger.addEventListener("click", function(hamburgerAnimate){
     hamburger.classList.toggle("active");
+    if (socialBox.classList.contains("active")) {
+        socialBox.classList.remove("active");
+    };
     if (hamburger.classList.contains("active")) {
         gsap.to(".handle-bar1", {
            rotateZ: 45,
@@ -73,6 +75,14 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
             left: "0vw",
             stagger: 0.2,
             duration: 0.6
+        })
+        gsap.to(".game-box", {
+            height: "5vw",
+        })
+        gsap.to(".game-box-activator", {
+            opacity: 1,
+            duration: 0.1,
+            delay: 0.2
         })
     }
 
@@ -106,10 +116,6 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
 
 })
 
-
-
-var socialBox = document.querySelector(".game-box-activator");
-
 socialBox.addEventListener("click", function(){
     socialBox.classList.toggle("active");
     if (socialBox.classList.contains("active")) {
@@ -130,7 +136,8 @@ socialBox.addEventListener("click", function(){
         })
         gsap.to(".game-box-activator", {
             opacity: 1,
-            duration: 0.1
+            duration: 0.1,
+            delay: 0.2
         })
     }
 })
@@ -139,11 +146,12 @@ socialBox.addEventListener("click", function(){
 
 
 if ($(window).width() <= 571) {
-
-    var hamburger  = document.querySelector(".hamburger-container");
     
     hamburger.addEventListener("click", function(hamburgerAnimate){
         hamburger.classList.toggle("active");
+        if (socialBox.classList.contains("active")) {
+            socialBox.classList.remove("active");
+        };
         if (hamburger.classList.contains("active")) {
             gsap.to(".handle-bar1", {
                rotateZ: 45,
@@ -167,6 +175,14 @@ if ($(window).width() <= 571) {
                 left: "0vw",
                 stagger: 0.2,
                 duration: 0.6
+            })
+            gsap.to(".game-box", {
+                height: "8vw",
+            })
+            gsap.to(".game-box-activator", {
+                opacity: 1,
+                duration: 0.1,
+                delay: 0.2
             })
         }
     
@@ -200,8 +216,6 @@ if ($(window).width() <= 571) {
     
     })
 
-    var socialBox = document.querySelector(".game-box-activator");
-
 socialBox.addEventListener("click", function(){
     socialBox.classList.toggle("active");
     if (socialBox.classList.contains("active")) {
@@ -222,7 +236,8 @@ socialBox.addEventListener("click", function(){
         })
         gsap.to(".game-box-activator", {
             opacity: 1,
-            duration: 0.1
+            duration: 0.1,
+            delay: 0.2
         })
     }
 })
