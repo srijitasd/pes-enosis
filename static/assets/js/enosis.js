@@ -147,7 +147,7 @@ if ($(window).width() <= 571) {
         if (hamburger.classList.contains("active")) {
             gsap.to(".handle-bar1", {
                rotateZ: 45,
-               translateY: "2vh"
+               translateY: "2.2vh"
             })
     
             gsap.to(".handle-bar2", {
@@ -155,7 +155,7 @@ if ($(window).width() <= 571) {
             })
     
             gsap.to(".handle-bar3", {
-                translateY: "-1.8vh",
+                translateY: "-2.3vh",
                 rotateZ: -45
              })
             gsap.to(".nav-box", {
