@@ -9,6 +9,17 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+html   {
+    width: 100vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar  {
+    display: none;
 }
 
 body   {
@@ -19,6 +30,7 @@ body   {
 /* common variables end */
 
 /* 2. header */
+
 .header-box {
     display: grid;
     height: 100vh;
@@ -148,7 +160,7 @@ body   {
     display: table-row;
     flex-direction: column;
     border-radius: 50%;
-    margin: 3vw 3vw 2.5vw 2.5vw;
+    margin: 3vw 5vw 2.5vw 2.5vw;
     overflow: hidden;
 }
 
@@ -202,6 +214,64 @@ body   {
     background-image: url(/static/assets/images/nav-side-bar.svg);
     background-size: 100% 100%;
 }
+
+/* header box for pc ends */
+
+/* tournament section for pc starts */
+
+.tournament-container  {
+    height: 125vh;
+    width: 100vw;
+    position: relative;
+    top: -25vh;
+    background-image: url('../images/tournamentbox.png');
+    background-size: 100% 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    z-index: 0;
+}
+
+.tour-header  {
+    grid-row: 2/3;
+    align-self: center;
+    font-size: 4.25vw;
+    font-family: impact;
+    position: relative;
+    left: 8vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #155BAD;
+    
+}
+
+.tournament-section  {
+    grid-row: 3/4;
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2vw;
+}
+
+.tour-box  {
+    height: 45vh;
+    width: 40vw;
+    background-image: url('/static/assets/images/tournamentbg.png');
+    background-size: 100% 100%;
+    border-radius: 3vw;
+    margin-top: 5vw;
+    margin: 2vw;
+}
+
+.tour1  {
+    justify-self: end;
+}
+
+.tour2  {
+    justify-self: start;
+}
+
+/* tournament section for pc ends */
 
 @media only screen and (orientation: portrait) {
     .header-box {
@@ -294,6 +364,33 @@ body   {
          height: 15vh;
      }
 
+/* 3. header end */
+
+/* tournament section for mobile starts */
+
+
+.tournament-container  {
+    height: 57vh;
+    top: -20vw;
+    background-image: url('../images/tournamentbox-min.png');
+    background-size: 100% 100%;
+    grid-template-rows: 1.25fr 1fr 3.5fr;
+
 }
 
-/* 3. header end */
+.tour-header  {
+    font-size: 7vw;
+    
+}
+
+.tour-box  {
+    height: 23vh;
+    width: 40vw;
+    background-image: url(/static/assets/images/tournamentbg-min.png);
+    background-size: 100% 100%;
+}
+
+
+/* tournament section for mobile ends */
+
+    }
