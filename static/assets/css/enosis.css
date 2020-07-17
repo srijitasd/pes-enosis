@@ -212,18 +212,11 @@ body   {
 }
 
 /* nav-side-bar starts */
-
-.side-nav-container  {
-    grid-area: side-nav;
-    position: relative;
-}
-
 .nav-side-bar   {
-    height: 10vw;
-    width: 3vw;
-    background-color: red;
-    position: sticky;
-    left: 3vw;
+    height: -webkit-fill-available;
+    width: 75px;
+    position: fixed;
+    left: 1rem;
     background-image: url(/static/assets/images/nav-side-bar.svg);
     background-size: 100% 100%;
 }
