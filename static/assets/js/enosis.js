@@ -48,37 +48,31 @@ LandingLogoAnimation = ()=> {
 
   /* global variables */
 
-var hamburger  = document.querySelector(".hamburger-container");
+var hamburger  = document.querySelector(".menu-btn");
 var socialBox = document.querySelector(".game-box-activator");
 
  /* global variables ends */
 
 
  /* hamburger animation starts */
+let isMenuOpen = false;
 
-
-if ($(window).width() > 571) {
-    
 hamburger.addEventListener("click", function(hamburgerAnimate){
+    hamburgerAnimate.preventDefault();
+    if (!isMenuOpen) {
+        hamburger.classList.add("open");
+    } else {
+        hamburger.classList.remove("open");
+    }
+    
+    isMenuOpen = !isMenuOpen;
+        
     hamburger.classList.toggle("active");
     if (socialBox.classList.contains("active")) {
         socialBox.classList.remove("active");
     };
     if (hamburger.classList.contains("active")) {
-        gsap.to(".handle-bar1", {
-           rotateZ: 45,
-           translateY: "2.4vh"
-        })
-
-        gsap.to(".handle-bar2", {
-            opacity: 0
-        })
-
-        gsap.to(".handle-bar3", {
-            translateY: "-2.4vh",
-            rotateZ: -45
-         })
-         gsap.to(".nav-box", {
+        gsap.to(".nav-box", {
             top: "0vh",
             duration: 1,
             ease: "expo.out",
@@ -90,31 +84,7 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
             stagger: 0.2,
             duration: 0.6
         })
-        gsap.to(".game-box", {
-            height: "5vw",
-        })
-        gsap.to(".game-box-activator", {
-            opacity: 1,
-            duration: 0.1,
-            delay: 0.2
-        })
-    }
-
-
-    else {
-        gsap.to(".handle-bar1", {
-            rotateZ: "0deg",
-            translateY: 0
-         })
-
-         gsap.to(".handle-bar2", {
-            opacity: 1
-        })
- 
-         gsap.to(".handle-bar3", {
-             rotateZ: "0deg",
-             translateY: 0
-          })
+    } else {
         gsap.to(".nav-box", {
             top: "-100vh",
             duration: 0.8,
@@ -130,77 +100,26 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
 
 })
 
- /* hamburger animation for pc ends */
-
-       /* social-box animation for pc starts */
-
-socialBox.addEventListener("click", function(){
-    socialBox.classList.toggle("active");
-    if (socialBox.classList.contains("active")) {
-        gsap.to(".game-box", {
-            height: "20vw",
-            borderRadius: "3vw"
-        })
-
-        gsap.to(".game-box-activator", {
-            opacity: 0,
-            duration: 0.1
-        })
-    }
-
-    else  {
-        gsap.to(".game-box", {
-            height: "5vw",
-        })
-        gsap.to(".game-box-activator", {
-            opacity: 1,
-            duration: 0.1,
-            delay: 0.2
-        })
-    }
-})
-
-      /* social-box animation for pc ends */
-
-}
-
-
- /* hamburger animation for mobile starts */
-
-
-if ($(window).width() <= 571) {
+/* hamburger animation for pc ends */
     
-    hamburger.addEventListener("click", function(hamburgerAnimate){
-        hamburger.classList.toggle("active");
+if ($(window).width() > 767) {
+/* social-box animation for pc starts */
+    socialBox.addEventListener("click", function(event){
+        event.preventDefault();
+        socialBox.classList.toggle("active");
         if (socialBox.classList.contains("active")) {
-            socialBox.classList.remove("active");
-        };
-        if (hamburger.classList.contains("active")) {
-            gsap.to(".handle-bar1", {
-               rotateZ: 45,
-               translateY: "1.9vh"
-            })
-    
-            gsap.to(".handle-bar2", {
-                opacity: 0
-            })
-    
-            gsap.to(".handle-bar3", {
-                translateY: "-1.9vh",
-                rotateZ: -45
-             })
-            gsap.to(".nav-box", {
-                top: "0vh"
-            })
-            gsap.to(".nav-links", {
-                opacity: 1,
-                delay: 0.4,
-                left: "0vw",
-                stagger: 0.2,
-                duration: 0.6
-            })
             gsap.to(".game-box", {
-                height: "8vw",
+                height: "300px",
+                borderRadius: "100px"
+            })
+
+            gsap.to(".game-box-activator", {
+                opacity: 0,
+                duration: 0.1
+            })
+        } else {
+            gsap.to(".game-box", {
+                height: "75px",
             })
             gsap.to(".game-box-activator", {
                 opacity: 1,
@@ -208,70 +127,33 @@ if ($(window).width() <= 571) {
                 delay: 0.2
             })
         }
+    })
+/* social-box animation ends*/
+}
     
-    
-        else {
-            gsap.to(".handle-bar1", {
-                rotateZ: "0deg",
-                translateY: 0
-             })
-    
-             gsap.to(".handle-bar2", {
-                opacity: 1
+if ($(window).width() <= 767) {
+    socialBox.addEventListener("click", function(event){
+        event.preventDefault();
+        socialBox.classList.toggle("active");
+        if (socialBox.classList.contains("active")) {
+            gsap.to(".game-box", {
+                height: "200px",
+                borderRadius: "100px"
             })
-     
-             gsap.to(".handle-bar3", {
-                 rotateZ: "0deg",
-                 translateY: 0
-              })
-              gsap.to(".nav-box", {
-                top: "-100vh",
-                duration: 1,
-                delay: 0.6
-            })
-            gsap.to(".nav-links", {
+    
+            gsap.to(".game-box-activator", {
                 opacity: 0,
-                left: "-4vw",
-                stagger: 0.1,
-                duration: 0.3
+                duration: 0.1
+            })
+        } else {
+            gsap.to(".game-box", {
+                height: "50px",
+            })
+            gsap.to(".game-box-activator", {
+                opacity: 1,
+                duration: 0.1,
+                delay: 0.2
             })
         }
-    
     })
-
-
-     /* hamburger animation for mobile starts */
-
-
-      /* social-box animation for mobile starts */
-
-socialBox.addEventListener("click", function(){
-    socialBox.classList.toggle("active");
-    if (socialBox.classList.contains("active")) {
-        gsap.to(".game-box", {
-            height: "32vw",
-            borderRadius: "5vw"
-        })
-
-        gsap.to(".game-box-activator", {
-            opacity: 0,
-            duration: 0.1
-        })
-    }
-
-    else  {
-        gsap.to(".game-box", {
-            height: "8vw",
-        })
-        gsap.to(".game-box-activator", {
-            opacity: 1,
-            duration: 0.1,
-            delay: 0.2
-        })
-    }
-})
-
-      /* social-box animation for mobile ends */
-    
-    }
-    
+}

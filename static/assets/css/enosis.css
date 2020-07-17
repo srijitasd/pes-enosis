@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 html   {
@@ -24,7 +25,6 @@ html::-webkit-scrollbar  {
 
 body   {
     background-color: #CAF0F8;
-    height: 1000vw;
 }
 
 /* common variables end */
@@ -33,9 +33,10 @@ body   {
 
 .header-box {
     display: grid;
+    padding: 0 1rem;
     height: 100vh;
-    grid-template-rows: 1.5fr 11fr;
-    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-rows: 1fr 11fr;
+    grid-template-columns: 1fr 7fr 4fr;
     grid-template-areas: ". logo-container hamburger"
                          "side-nav logo-container social-box ";
     background-image: url('../images/headerbox.png');
@@ -45,56 +46,78 @@ body   {
 }
 
 /* 2.1 hamburger menu starts */
-
-.hamburger-menu   {
-    grid-area: hamburger;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: " . hamburger-container";
+.menu-btn {
+    position: fixed;
+  
+    display: flex;
+    justify-content: flex-end;
+    top: 1rem;
+    right: 0;
+    padding: 1rem;
+    z-index: 9;
+    overflow: hidden;
+  
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-.hamburger-container   {
-    grid-area: hamburger-container;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    z-index: 2;
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    width: 50px;
+    height: 6px;
+    z-index: 100;
+    overflow: hidden;
+
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: "";
+    position: absolute;
+}
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+    transform: translateY(16px);
 }
 
-.hamburger-handle   {
-    height: 4px;
-    width: 38px;
-    background-color: white;
-    justify-self: center;
-    border-radius: 2vw;
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+    width: 100px;
+    background-color: transparent;
+    box-shadow: none;
 }
-
-.handle-bar1  {
-    align-self: flex-end;
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
 }
-
-.handle-bar3  {
-    align-self: flex-start;
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }
-
 /* 2.1 hamburger menu ends */
 
 /* 2.2 nav box starts */
 
-.nav-box   {
+.nav-box {
     display: grid;
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    z-index: 8;
     top: -100vh;
-    background-image: url('../images/headerbox.png');
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
     background-position: center;
     background-size: cover;
-    grid-gap: 1vw;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 1rem;
+    grid-template-columns: auto 2fr auto;
     grid-template-areas: ". . ."
-                         "nav-logo-container nav-list ."
+                         ". nav-list ."
                          ". . .";
 }
 
@@ -114,9 +137,10 @@ body   {
 
 .nav-list li a  {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+    opacity: 0.7;
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 3rem;
     font-weight: bold;
     transition: ease 0.3s;
 }
@@ -128,17 +152,8 @@ body   {
 }
 
 .nav-list li a:hover  {
-    font-size: 4.1vw;
-}
-
-.nav-logo-container  {
-    grid-area: nav-logo-container;
-    opacity: 0.5;
-    margin-left: 2vw;
-}
-
-.nav-logo-container img  {
-    filter: blur(1px);
+    font-size: 4rem;
+    opacity: 1;
 }
 
 
@@ -147,6 +162,9 @@ body   {
 /* social box starts */
 
 .social-box  {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     display: flex;
     grid-area: social-box;
     justify-content: flex-end;
@@ -155,31 +173,26 @@ body   {
 
 .game-box  {
     background: linear-gradient(180deg, #0466C8 0%, #001233 100%);
-    height: 5vw;
-    width: 5vw;
+    height: 75px;
+    width: 75px;
     display: table-row;
     flex-direction: column;
     border-radius: 50%;
-    margin: 3vw 5vw 2.5vw 2.5vw;
     overflow: hidden;
 }
 
 .game-box-activator  {
-    position: relative;
-    top: -2.5vw;
-    left: 7.5vw;
-    height: 5vw;
-    width: 5vw;
+    position: absolute;
 }
 
 .game-box-activator img  {
-    height: 5vw;
-    width: 5vw;
+    height: 75px;
+    width: 75px;
 }
 
 .social-buttons  {
-    height: 5vw;
-    width: 5vw;
+    height: 75px;
+    width: 75px;
 }
 
 /* social box ends */
@@ -220,21 +233,31 @@ body   {
 /* tournament section for pc starts */
 
 .tournament-container  {
-    height: 125vh;
+    height: 100vh;
     width: 100vw;
     position: relative;
+    overflow: visible;
+    z-index: -1;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr;
+}
+
+.tournament-container::before {
+    content: "";
+    height: 125vh;
+    width: 100vw;
     top: -25vh;
+    overflow: hidden;
+    position: absolute;
     background-image: url('../images/tournamentbox.png');
     background-size: 100% 100%;
     background-position: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 4fr;
-    z-index: 0;
 }
 
 .tour-header  {
-    grid-row: 2/3;
+    grid-row: 1/2;
     align-self: center;
     font-size: 4.25vw;
     font-family: impact;
@@ -246,7 +269,7 @@ body   {
 }
 
 .tournament-section  {
-    grid-row: 3/4;
+    grid-row: 2/3;
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: 1fr 1fr;
@@ -274,39 +297,22 @@ body   {
 /* tournament section for pc ends */
 
 @media only screen and (orientation: portrait) {
+    
     .header-box {
-        height: 56vh;
-        background-image: url('../images/headerbox-min.png');
+        height: 50vh;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 5fr;
         grid-template-areas: ". logo-container hamburger-container"
                              "side-nav logo-container social-box";
     }
 
-    /* 2.1 hamburger menu starts */
-
-    .hamburger-menu   {
-        display: grid;
-        grid-area: hamburger-container;
-        grid-template-columns: 1fr 4fr;
-    }
-
-    /* 2.1 hamburger menu ends */
-
     /* 2.2 navbox menu starts */
-
-    .nav-box  {
-        grid-template-columns: 1.5fr 2fr 1.5fr;
-        background-image: url('../images/headerbox-min.png');
-        height: 56vh;
-    }
-
     .nav-list li a  {
-        font-size: 5vw;
+        font-size: 2rem;
     }
 
     .nav-list li a:hover  {
-        font-size: 5.2vw;
+        font-size: 3rem;
     }
 
     /* 2.2 navbox menu ends */
@@ -323,74 +329,98 @@ body   {
        height: 40vw;
     }
 
-    /* 2.3 social-box menu starts */
-
-    .social-box  {
-        grid-area: social-box;
+    .logo-container  {
+        grid-area: logo-container;
     }
 
-    .game-box   {
-        width: 8vw;
-        height: 8vw;
-        margin: 4vw 7vw 2vw 2.5vw;
+
+    .nav-side-bar  {
+        width: 7vw;
+        height: 15vh;
     }
 
-    .game-box-activator  {
-        position: relative;
-        top: -2vw;
-        left: 10.5vw;
-        height: 8vw;
-        width: 8vw;
-    }
-    
-    .game-box-activator img  {
-        height: 8vw;
-        width: 8vw;
+    /* 3. header end */
+
+    /* tournament section for mobile starts */
+
+
+    .tournament-container  {
+        height: 50vh;
     }
 
-    .social-buttons  {
-        height: 8vw;
-        width: 8vw;
+    .tournament-container::before {
+        content: "";
+        height: 65vh;
+        top: -15vh;
+        overflow: hidden;
+        position: absolute;
+        background-image: url(../images/tournamentbox.png);
+        background-size: 100% 100%;
+        background-position: center;
     }
-     /* 2.3 social-box menu ends */
 
-     .logo-container  {
-         grid-area: logo-container;
-     }
+    .tour-header  {
+        font-size: 7vw;
+        
+    }
 
-
-     .nav-side-bar  {
-         width: 7vw;
-         height: 15vh;
-     }
-
-/* 3. header end */
-
-/* tournament section for mobile starts */
-
-
-.tournament-container  {
-    height: 57vh;
-    top: -20vw;
-    background-image: url('../images/tournamentbox-min.png');
-    background-size: 100% 100%;
-    grid-template-rows: 1.25fr 1fr 3.5fr;
-
-}
-
-.tour-header  {
-    font-size: 7vw;
-    
-}
-
-.tour-box  {
-    height: 23vh;
-    width: 40vw;
-    background-image: url(/static/assets/images/tournamentbg-min.png);
-    background-size: 100% 100%;
-}
+    .tour-box  {
+        height: 23vh;
+        width: 40vw;
+        background-image: url(/static/assets/images/tournamentbg-min.png);
+        background-size: 100% 100%;
+    }
 
 
 /* tournament section for mobile ends */
 
+}
+
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+    .header-box {
+        background-image: url(../images/headerbox-min.png);
     }
+    /* 2.1 hamberger manue start  */
+    .menu-btn__burger,
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+        width: 25px;
+        height: 3px;
+    }
+
+    .menu-btn__burger::before {
+        transform: translateY(-8px);
+    }
+    .menu-btn__burger::after {
+        transform: translateY(8px);
+    }
+
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+        width: 75px;
+    }
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    /* 2.1 hamburger menu ends */
+
+    /* social box starts  */
+    .game-box-activator img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .social-buttons {
+        height: 50px;
+        width: 50px;
+    }
+    .game-box {
+        height: 50px;
+        width: 50px;
+    }
+
+    /* social box ends  */
+}
