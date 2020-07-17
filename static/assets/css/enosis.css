@@ -237,7 +237,8 @@ body   {
     grid-row: 2/3;
     align-self: center;
     font-size: 4.25vw;
-    font-family: impact;
+    font-family: sans-serif;
+    font-weight: bold;
     position: relative;
     left: 8vw;
     padding-left: 2vw;
