@@ -290,7 +290,10 @@ body   {
 
 /* tournament section for pc ends */
 
+
+
 /* blogs section starts for pc */
+
 
 .blog-section   {
     height: 100vh;
@@ -348,7 +351,9 @@ body   {
     text-align: center;
     font-family: sans-serif;
     font-size: 1.6vw;
-    padding-top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12.5px;
 }
 
 .blog-3, .blog-4  {
@@ -403,6 +408,11 @@ body   {
     text-align: center;
     padding: 5px;
 }
+
+
+/* blog section for pc ends */
+
+
 
 @media only screen and (orientation: portrait) {
     
@@ -484,6 +494,9 @@ body   {
 /* tournament section for mobile ends */
 
 
+/* blogs section for mobile starts */
+
+
 .blog-section  {
     height: 70vw;
 }
@@ -496,17 +509,75 @@ body   {
 .blogs-container  {
     margin-left: 2rem;
     margin-right: 2.5rem;
-    grid-template-columns: 3fr 3fr 4fr 4fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
 }
 
-.blog-1, .blog-2  {
-    margin: 5px 5px 5px 10px ;
+.blog-1, .blog-2 {
+    margin: 5px;
+}
+
+
+.blog-1  {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.blog-2  {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.blog-1 p, .blog-2 p  {
+    grid-row: 2/3;
+    color: white;
+    background-color: rgba(2, 62,138, 0.5);
+    padding: 3px;
+    font-size: 2vw;
+    padding-top: 5px;
 }
 
 .blog-3, .blog-4  {
-    margin: 5px 2px 2px 2px;
-    margin-bottom: 5px;
+
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    margin: 5px;
+    background-size: 100% 100%;
+    border-radius: 10px;
 }
+
+.blog-3  {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-image: url('/static/assets/images/player.jpg');
+}
+
+.blog-4  {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-image: url('/static/assets/images/images.jpg');
+}
+
+.blog-image  {
+    display: none;
+}
+
+.blog-heading {
+    font-size: 2vw;
+    background-color: rgba(2, 62,138, 0.5);
+    padding: 3px;
+    padding-top: 7.5px;
+}
+
+.blog-text  {
+    display: none;
+}
+
+
+/* blog section for mobile ends */
+
 
 
 }
