@@ -231,7 +231,6 @@ body   {
     position: relative;
     overflow: visible;
     z-index: -1;
-    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 4fr;
@@ -256,6 +255,7 @@ body   {
     font-family: sans-serif;
     font-weight: bold;
     position: relative;
+    color: #03045E;
     left: 8vw;
     padding-left: 2vw;
     border-left: 1vw solid #155BAD;
@@ -302,6 +302,7 @@ body   {
     grid-template-rows: 1fr 5fr;
     grid-gap: 2vw;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .blog-section-heading  {
@@ -309,6 +310,7 @@ body   {
     font-size: 4.25vw;
     font-family: sans-serif;
     font-weight: bold;
+    color: #03045E;
     position: relative;
     left: 8vw;
     padding-left: 2vw;
@@ -483,9 +485,15 @@ body   {
         
     }
 
+    .tournament-section  {
+        grid-gap: 0vw;
+        margin-left: 2rem;
+        margin-right: 2.5rem;
+    }
+
     .tour-box  {
-        height: 23vh;
-        width: 40vw;
+        height: 20vh;
+        width: 38vw;
         background-image: url(/static/assets/images/tournamentbg-min.png);
         background-size: 100% 100%;
     }
@@ -499,6 +507,7 @@ body   {
 
 .blog-section  {
     height: 70vw;
+    margin-top: 30px;
 }
 
 .blog-section-heading  {
