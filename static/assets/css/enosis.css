@@ -290,6 +290,120 @@ body   {
 
 /* tournament section for pc ends */
 
+/* blogs section starts for pc */
+
+.blog-section   {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-gap: 2vw;
+    margin-bottom: 50px;
+}
+
+.blog-section-heading  {
+    align-self: center;
+    font-size: 4.25vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+    left: 8vw;
+    padding-left: 2vw;
+    border-left: 1vw solid #155BAD;
+}
+
+.blogs-container  {
+    margin-left: 3rem;
+    margin-right: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.blog-1, .blog-2  {
+    margin: 10px 10px 10px 40px;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+}
+
+.blog-1  {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url('/static/assets/images/group.jpg');
+}
+
+.blog-2  {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-image: url('/static/assets/images/winner.jpg');
+}
+
+.blog-1 p, .blog-2 p  {
+    grid-row: 2/3;
+    color: white;
+    background-color: rgba(2, 62,138, 0.6);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.6vw;
+    padding-top: 5px;
+}
+
+.blog-3, .blog-4  {
+    border-radius: 0px 0px 10px 10px;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 2fr 1fr 3fr;
+    margin: 10px 2px 2px 2px;
+    margin-bottom: 10px;
+}
+
+.blog-3  {
+    grid-column: 3/4;
+    
+}
+
+.blog-3 .blog-image  {
+    grid-row: 1/2;
+    background-image: url('/static/assets/images/player.jpg');
+    background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.blog-4  {
+    grid-column: 4/5;
+}
+
+.blog-4 .blog-image  {
+    grid-row: 1/2;
+    background-image: url('/static/assets/images/images.jpg');
+    background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.blog-heading  {
+    grid-row: 2/3;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #023E8a;
+}
+
+.blog-text  {
+    grid-row: 3/4;
+    color: white;
+    font-size: 1.8vw;
+    background-color: #023E8a;
+    text-align: center;
+    padding: 5px;
+}
+
 @media only screen and (orientation: portrait) {
     
     .header-box {
@@ -331,6 +445,7 @@ body   {
     .nav-side-bar  {
         width: 7vw;
         height: 15vh;
+        left: 0.4rem;
     }
 
     /* 3. header end */
@@ -367,6 +482,32 @@ body   {
 
 
 /* tournament section for mobile ends */
+
+
+.blog-section  {
+    height: 70vw;
+}
+
+.blog-section-heading  {
+    align-self: center;
+    font-size: 7vw;
+}
+
+.blogs-container  {
+    margin-left: 2rem;
+    margin-right: 2.5rem;
+    grid-template-columns: 3fr 3fr 4fr 4fr;
+}
+
+.blog-1, .blog-2  {
+    margin: 5px 5px 5px 10px ;
+}
+
+.blog-3, .blog-4  {
+    margin: 5px 2px 2px 2px;
+    margin-bottom: 5px;
+}
+
 
 }
 
