@@ -256,7 +256,7 @@ body   {
     font-weight: bold;
     position: relative;
     color: #03045E;
-    left: 8vw;
+    left: 8.5vw;
     padding-left: 2vw;
     border-left: 1vw solid #155BAD;
     
@@ -312,7 +312,7 @@ body   {
     font-weight: bold;
     color: #03045E;
     position: relative;
-    left: 8vw;
+    left: 8.5vw;
     padding-left: 2vw;
     border-left: 1vw solid #155BAD;
 }
@@ -421,6 +421,11 @@ body   {
 
 
 /* blog section for pc ends */
+
+
+.about-us  {
+    height: 100vh;
+}
 
 
 
