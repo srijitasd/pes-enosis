@@ -227,19 +227,18 @@ body   {
 
 .tournament-container  {
     height: 100vh;
-    width: 100vw;
     position: relative;
     overflow: visible;
     z-index: -1;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 4fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 .tournament-container::before {
     content: "";
-    height: 125vh;
-    width: 100vw;
+    height: 125%;
+    width: 100%;
     top: -25vh;
     overflow: hidden;
     position: absolute;
@@ -256,7 +255,7 @@ body   {
     font-weight: bold;
     position: relative;
     color: #03045E;
-    left: 8.5vw;
+    left: 90px;
     padding-left: 2vw;
     border-left: 1vw solid #155BAD;
     
@@ -264,28 +263,26 @@ body   {
 
 .tournament-section  {
     grid-row: 2/3;
+    margin-left: 3rem;
+    margin-right: 4rem;
     display: grid;
-    grid-gap: 2vw;
     grid-template-columns: 1fr 1fr;
-    margin-left: 2vw;
+    grid-template-rows: 1fr;
 }
 
 .tour-box  {
-    height: 45vh;
-    width: 40vw;
+    display: grid;
     background-image: url('/static/assets/images/tournamentbg.png');
     background-size: 100% 100%;
     border-radius: 3vw;
-    margin-top: 5vw;
-    margin: 2vw;
 }
 
 .tour1  {
-    justify-self: end;
+    margin-left: 35px;
 }
 
 .tour2  {
-    justify-self: start;
+    margin-left: 15px;
 }
 
 /* tournament section for pc ends */
@@ -312,14 +309,14 @@ body   {
     font-weight: bold;
     color: #03045E;
     position: relative;
-    left: 8.5vw;
+    left: 90px;
     padding-left: 2vw;
     border-left: 1vw solid #155BAD;
 }
 
 .blogs-container  {
-    margin-left: 3rem;
-    margin-right: 4rem;
+    margin-left: 3.2rem;
+    margin-right: 4.25rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -480,6 +477,7 @@ body   {
 
     .tournament-container  {
         height: 50vh;
+        grid-template-rows: 1fr 1.5fr 1fr;
     }
 
     .tournament-container::before {
@@ -495,20 +493,28 @@ body   {
 
     .tour-header  {
         font-size: 7vw;
+        left: 35px;
         
     }
 
     .tournament-section  {
-        grid-gap: 0vw;
-        margin-left: 1.5rem;
-        margin-right: 1.8rem;
+        grid-gap: 10px;
+        margin-left: 0rem;
+        margin-left: 2.1rem;
+        margin-right: 2.5rem;
     }
 
     .tour-box  {
-        height: 20vh;
-        width: 39vw;
         background-image: url(/static/assets/images/tournamentbg-min.png);
         background-size: 100% 100%;
+    }
+
+    .tour1  {
+        margin-left: 0rem;
+    }
+
+    .tour2  {
+        margin-left: 0rem;
     }
 
 
@@ -526,6 +532,7 @@ body   {
 .blog-section-heading  {
     align-self: center;
     font-size: 7vw;
+    left: 35px;
 }
 
 .blogs-container  {
