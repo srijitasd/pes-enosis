@@ -521,6 +521,7 @@ body   {
     .tour-box  {
         background-image: url('/static/assets/images/tournament-bg.jpg');
         background-size: 100% 100%;
+        grid-template-rows: 3fr 2fr;
     }
 
     .tour1  {
@@ -533,7 +534,7 @@ body   {
 
     .tournament-title  {
         font-size: 3.75vw;
-        padding: 5px;
+        padding: 10px;
     }
 
 
