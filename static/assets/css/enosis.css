@@ -264,7 +264,7 @@ body   {
 .tournament-section  {
     grid-row: 2/3;
     margin-left: 3rem;
-    margin-right: 4rem;
+    margin-right: 4.1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -272,17 +272,31 @@ body   {
 
 .tour-box  {
     display: grid;
-    background-image: url('/static/assets/images/tournamentbg.png');
+    background-image: url('/static/assets/images/tournament-bg.jpg');
     background-size: 100% 100%;
     border-radius: 3vw;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    text-align: center;
 }
 
 .tour1  {
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 .tour2  {
     margin-left: 15px;
+}
+
+.tournament-title  {
+    color: seashell;
+    grid-row: 2/3;
+    align-self: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgba(2, 62,138, 0.6);
+    font-size: 2.5vw;
+    padding: 25px;
 }
 
 /* tournament section for pc ends */
@@ -486,7 +500,7 @@ body   {
         top: -15vh;
         overflow: hidden;
         position: absolute;
-        background-image: url(../images/tournamentbox.png);
+        background-image: url('../images/tournamentbox.png');
         background-size: 100% 100%;
         background-position: center;
     }
@@ -500,12 +514,12 @@ body   {
     .tournament-section  {
         grid-gap: 10px;
         margin-left: 0rem;
-        margin-left: 2.1rem;
-        margin-right: 2.5rem;
+        margin-left: 2.2rem;
+        margin-right: 2.7rem;
     }
 
     .tour-box  {
-        background-image: url(/static/assets/images/tournamentbg-min.png);
+        background-image: url('/static/assets/images/tournament-bg.jpg');
         background-size: 100% 100%;
     }
 
@@ -515,6 +529,11 @@ body   {
 
     .tour2  {
         margin-left: 0rem;
+    }
+
+    .tournament-title  {
+        font-size: 3.5vw;
+        padding: 4px;
     }
 
 
