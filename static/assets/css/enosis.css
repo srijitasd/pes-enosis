@@ -582,7 +582,7 @@ body   {
 .blog-1 p, .blog-2 p  {
     grid-row: 2/3;
     color: white;
-    background-color: rgba(2, 62,138, 0.5);
+    background-color: rgba(2, 49, 110, 0.801);
     padding: 3px;
     font-size: 2vw;
     padding-top: 5px;
@@ -615,7 +615,7 @@ body   {
 
 .blog-heading {
     font-size: 2vw;
-    background-color: rgba(2, 62,138, 0.5);
+    background-color: rgba(2, 49, 110, 0.801);
     padding: 3px;
     padding-top: 7.5px;
 }
