@@ -289,7 +289,7 @@ body   {
 }
 
 .tournament-title  {
-    color: seashell;
+    color: white;
     grid-row: 2/3;
     align-self: center;
     font-family: sans-serif;
@@ -312,7 +312,7 @@ body   {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr;
     grid-gap: 2vw;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 50px;
 }
 
@@ -435,9 +435,72 @@ body   {
 
 
 .about-us  {
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 4fr 6fr;
 }
 
+.about-us::before  {
+    content: "";
+    height: 56vw;
+    width: 100%;
+    position: absolute;
+    background-image: url('/static/assets/images/about-us.png');
+    background-size: 100% 100%;
+    z-index: -1;
+    margin-top: 50px;
+}
+
+.about-us-header  {
+    grid-row: 1/2;
+    align-self: center;
+    font-size: 4.25vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+    color: #03045E;
+    left: 90px;
+    padding-left: 2vw;
+    border-left: 1vw solid #155BAD;
+}
+
+.about-us-container  {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 1fr;
+    margin-left: 3.2rem;
+    margin-right: 4.5rem;
+}
+
+.about-us-logo  {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about  {
+    width: 35vw;
+    height: 32.5vw;
+}
+
+.about-us-body  {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-content: center;
+}
+
+.about-us-text  {
+    grid-column: 2/3;
+    margin-right: 4.5rem;
+    font-family: sans-serif;
+    color: #03045E;
+    font-size: 2.2vw;
+    margin-top: 15vw;
+
+}
 
 
 @media only screen and (orientation: portrait) {
@@ -628,6 +691,57 @@ body   {
 /* blog section for mobile ends */
 
 
+.about-us  {
+    grid-gap: 0px;
+    grid-template-rows: 1fr 48vw 5fr;
+    margin-bottom: 20px;
+}
+
+.about-us::before  {
+    content: "";
+    margin-top: 60px;
+    height: 65vw;
+    width: 100vw;
+    position: absolute;
+    background-image: url('/static/assets/images/about-us-min.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.about-us-header  {
+    align-self: center;
+    font-size: 7vw;
+    left: 35px;
+}
+
+.about-us-container  {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr;
+    margin-left: 2rem;
+    margin-right: 2.5rem;
+}
+
+
+.about  {
+    width: 38vw;
+    height: 36vw;
+}
+
+.about-us-body  {
+    margin-top: 40px;
+    grid-template-columns: 1fr 4fr;
+}
+
+.about-us-text  {
+    margin-right: 2.7rem;
+    font-family: sans-serif;
+    color: #03045E;
+    font-size: 3.2vw;
+    margin-top: 5vw;
+
+}
 
 }
 
