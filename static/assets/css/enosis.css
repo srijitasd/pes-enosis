@@ -513,7 +513,7 @@ body   {
 
 .hall-of-fame  {
     margin-top: 100px;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr;
@@ -524,8 +524,9 @@ body   {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url('/static/assets/images/hof.png');
-    background-size: 100% 100%;
+    background-image: url('/static/assets/images/hof.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: -1;
 }
 
@@ -838,14 +839,14 @@ body   {
 
 .hall-of-fame  {
     margin-top: 50px;
-    height: 50vh;
+    height: auto;
     margin-bottom: 100px;
 }
 
 .hall-of-fame::before  {
     height: 45%;
     margin-top: 3vw;
-    background-image: url('/static/assets/images/hof-min.png');
+    background-image: url('/static/assets/images/hof-min.svg');
 }
 
 .hof-header  {
