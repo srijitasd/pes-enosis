@@ -839,6 +839,7 @@ body   {
 .hall-of-fame  {
     margin-top: 50px;
     height: 50vh;
+    margin-bottom: 100px;
 }
 
 .hall-of-fame::before  {
@@ -867,8 +868,8 @@ body   {
 }
 
 .cards img {
-    height: 27.25vw;
-    width: 22.5vw;
+    height: 30vw;
+    width: 25vw;
 }
 
 .cards h3  {
