@@ -434,6 +434,8 @@ body   {
 /* blog section for pc ends */
 
 
+/* about-us section starts for pc*/
+
 .about-us  {
     display: grid;
     grid-template-columns: 1fr;
@@ -501,6 +503,92 @@ body   {
     margin-top: 15vw;
 
 }
+
+
+/* about-us section ends for pc */
+
+
+/* hall of fame section starts for pc */
+
+
+.hall-of-fame  {
+    margin-top: 100px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr;
+}
+
+.hall-of-fame::before  {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('/static/assets/images/hof.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.hof-header  {
+    grid-row: 1/2;
+    justify-self: center;
+    font-size: 5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #03045E;
+    text-shadow: 0px 5px 5px white;
+}
+
+.hof-container  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-gap: 5px;
+}
+
+.inter-grp-tour  {
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: center;
+    font-size: 5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 5px 5px #03045E;
+}
+
+.grp-winners  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "third first second";
+    height: auto;
+    margin-left: 3.5rem;
+    margin-right: 4.25rem;
+}
+
+.cards  {
+    justify-self: center;
+}
+
+.cards img {
+    height: 25vw;
+    width: 20vw;
+    align-self: center;
+}
+
+.cards h3  {
+    text-align: center;
+    font-size: 3.5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #03045E;
+    text-shadow: 0px 3px 5px white;
+}
+
+.first  {
+    margin-top: 5vw;
+}
+
 
 
 @media only screen and (orientation: portrait) {
@@ -691,6 +779,8 @@ body   {
 /* blog section for mobile ends */
 
 
+/* about us section starts for mobile */
+
 .about-us  {
     grid-gap: 0px;
     grid-template-rows: 1fr 48vw 5fr;
@@ -741,6 +831,57 @@ body   {
     font-size: 3.2vw;
     margin-top: 5vw;
 
+}
+
+/* about us section ends for mobile */
+
+
+.hall-of-fame  {
+    margin-top: 50px;
+    height: 50vh;
+}
+
+.hall-of-fame::before  {
+    height: 50%;
+    background-image: url('/static/assets/images/hof-min.png');
+}
+
+.hof-header  {
+    font-size: 6vw;
+    text-shadow: 0px 2px 5px white;
+}
+
+.hof-container  {
+    grid-gap: 0px;
+}
+
+.inter-grp-tour  {
+    align-self: center;
+    font-size: 5.5vw;
+    text-shadow: 0px 2px 5px #03045E;
+}
+
+.grp-winners  {
+    margin-left: 2em;
+    margin-right: 2.5rem;
+}
+
+.cards img {
+    height: 27.25vw;
+    width: 22.5vw;
+}
+
+.cards h3  {
+    text-align: center;
+    font-size: 4.5vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #03045E;
+    text-shadow: 0px 3px 5px white;
+}
+
+.first  {
+    margin-top: 5vw;
 }
 
 }
