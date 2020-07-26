@@ -843,7 +843,8 @@ body   {
 }
 
 .hall-of-fame::before  {
-    height: 50%;
+    height: 45%;
+    margin-top: 3vw;
     background-image: url('/static/assets/images/hof-min.png');
 }
 
@@ -863,12 +864,12 @@ body   {
 }
 
 .grp-winners  {
-    margin-left: 2em;
-    margin-right: 2.5rem;
+    margin-left: 2.2em;
+    margin-right: 2rem;
 }
 
 .cards img {
-    height: 30vw;
+    height: 32vw;
     width: 25vw;
 }
 
