@@ -664,7 +664,20 @@ body   {
 }
 
 .footer  {
-    margin-top: 50vh;
+    margin-top: 30px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('/static/assets/images/footer.png');
+    background-size: 100% 100%;
+    background-position: center;
+
 }
 
 @media only screen and (orientation: portrait) {

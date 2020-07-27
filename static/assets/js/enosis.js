@@ -181,7 +181,7 @@ if ($(window).width() <= 767) {
         galleryBox.classList.toggle("active");
         if (galleryBox.classList.contains("active")) {
             gsap.to(".gallery-container", {
-                height: "auto",
+                height: "305vh",
                 duration: 2
             })
         }
