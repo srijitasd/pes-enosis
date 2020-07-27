@@ -50,6 +50,7 @@ LandingLogoAnimation = ()=> {
 
 var hamburger  = document.querySelector(".menu-btn");
 var socialBox = document.querySelector(".game-box-activator");
+var galleryBox = document.querySelector(".gallery-activator");
 
  /* global variables ends */
 
@@ -101,6 +102,7 @@ hamburger.addEventListener("click", function(hamburgerAnimate){
 })
 
 /* hamburger animation for pc ends */
+
     
 if ($(window).width() > 767) {
 /* social-box animation for pc starts */
@@ -129,6 +131,23 @@ if ($(window).width() > 767) {
         }
     })
 /* social-box animation ends*/
+
+galleryBox.addEventListener("click", function(){
+    galleryBox.classList.toggle("active");
+    if (galleryBox.classList.contains("active")) {
+        gsap.to(".gallery-container", {
+            height: "auto",
+            duration: 2
+        })
+    }
+    else {
+    gsap.to(".gallery-container", {
+        height: "80vh",
+        duration: 2
+    })
+}
+})
+
 }
     
 if ($(window).width() <= 767) {
@@ -155,5 +174,22 @@ if ($(window).width() <= 767) {
                 delay: 0.2
             })
         }
+    })
+ 
+    
+    galleryBox.addEventListener("click", function(){
+        galleryBox.classList.toggle("active");
+        if (galleryBox.classList.contains("active")) {
+            gsap.to(".gallery-container", {
+                height: "auto",
+                duration: 2
+            })
+        }
+        else {
+        gsap.to(".gallery-container", {
+            height: "45vh",
+            duration: 2
+        })
+    }
     })
 }
