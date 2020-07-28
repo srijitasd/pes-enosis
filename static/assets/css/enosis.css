@@ -648,7 +648,7 @@ body   {
     position: relative;
     padding: 0.5rem;
     margin-left: 5.5rem;
-    margin-right: 5rem;
+    margin-right: 4.2rem;
     background-color: #155BAD;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas: ". activate-button .";
@@ -1084,7 +1084,7 @@ body   {
 
 .gallery-activator  {
     margin-left: 2.2rem;
-    margin-right: 2.8rem;
+    margin-right: 3rem;
 }
 
 .activate-button img  {
