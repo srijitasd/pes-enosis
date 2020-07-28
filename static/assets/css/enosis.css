@@ -596,6 +596,8 @@ body   {
 
 /* gallery section starts for pc */
 
+
+
 .gallery  {
     grid-template-rows: 1fr 3fr;
     margin-top: 100px;
@@ -663,10 +665,20 @@ body   {
     width: 70px;
 }
 
+
+/* gallery section for pc ends */
+
+
+/* footer section starts for pc */
+
+
+
 .footer  {
     margin-top: 30px;
     height: 100vh;
     width: 100vw;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
 }
 
 .footer::before {
@@ -677,8 +689,63 @@ body   {
     background-image: url('/static/assets/images/footer.png');
     background-size: 100% 100%;
     background-position: center;
+    z-index: -1;
 
 }
+
+.footer-list  {
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+.footer-list a  {
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.list-container  {
+    text-align: center;
+}
+
+.list-container li  {
+    padding-bottom: 2vw;
+}
+
+
+.footer-base  {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.copyright  {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    font-family: sans-serif;
+    align-self: flex-end;
+    line-height: 12vh;
+}
+
+.footer-logo  {
+    justify-self: right;
+    align-self: center;
+    grid-column: 2/3 ;
+}
+
+.footer-logo img  {
+    height: 10vw;
+}
+
+
+/* footer section ends for pc */
+
+
 
 @media only screen and (orientation: portrait) {
     
@@ -1023,7 +1090,55 @@ body   {
 }
 
 
-/* hall of fame section ends for mobile */
+/* gallery section ends for mobile */
+
+
+
+/* footer section starts for mobile */
+
+
+.footer  {
+    height: 56vh;
+    grid-template-rows: 4fr 1fr;
+}
+
+.footer::before {
+    height: 56vh;
+    background-image: url('/static/assets/images/footer-logo-min.png');
+}
+
+.footer-list a  {
+    font-size: 4.2vw;
+    font-weight: bold;
+}
+
+.list-container li  {
+    padding-bottom: 3vw;
+}
+
+.footer-base  {
+    grid-template-columns: 2fr 1fr;
+}
+
+.copyright  {
+    font-size: 3vw;
+    line-height: 8vh;
+    margin-left: 2.2rem;
+}
+
+.footer-logo  {
+    justify-self: right;
+    align-self: center;
+    margin-top: 4vw;
+    grid-column: 2/3 ;
+}
+
+.footer-logo img  {
+    height: 10vw;
+}
+
+
+/* footer section ends for mobile */
 
 }
 
