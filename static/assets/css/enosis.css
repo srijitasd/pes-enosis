@@ -1021,6 +1021,7 @@ body   {
 .inter-grp-tour  {
     align-self: center;
     font-size: 1rem;
+    margin-top: 0.5rem;
     text-shadow: 0px 2px 5px rgba(3, 4, 94, 0.5);
 }
 
