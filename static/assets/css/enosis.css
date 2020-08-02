@@ -231,6 +231,7 @@ body   {
     overflow: visible;
     z-index: -1;
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
 }
@@ -309,6 +310,7 @@ body   {
 .blog-section   {
     height: 100vh;
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr;
     margin-bottom: 20px;
@@ -332,7 +334,7 @@ body   {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 1rem;
     padding-bottom: 5px;
 }
 
@@ -437,7 +439,7 @@ body   {
 .about-us  {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 1rem;
     grid-template-rows: 1fr 5fr 6fr;
 }
 
@@ -514,6 +516,7 @@ body   {
     margin-top: 100px;
     height: auto;
     display: grid;
+    grid-gap: 1rem;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr;
 }
@@ -543,7 +546,7 @@ body   {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
-    grid-gap: 5px;
+    grid-gap: 1rem;
 }
 
 .inter-grp-tour  {
@@ -598,8 +601,9 @@ body   {
 
 
 .gallery  {
+    display: grid;
     grid-template-rows: 1fr 3fr;
-    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .gallery-header  {
@@ -617,7 +621,6 @@ body   {
 
 .gallery-container  {
     height: 80vh;
-    margin-top: 30px;
     margin-left: 4.5rem;
     margin-right: 3.2rem;
     overflow: hidden;
@@ -941,7 +944,8 @@ body   {
 /* about us section starts for mobile */
 
 .about-us  {
-    grid-gap: 0px;
+    display: grid;
+    grid-gap: 1rem;
     grid-template-rows: 1fr 48vw 5fr;
     margin-bottom: 20px;
 }
@@ -1056,7 +1060,8 @@ body   {
 
 .gallery  {
     grid-template-rows: 1fr 3fr;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .gallery-header  {
