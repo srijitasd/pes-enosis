@@ -601,9 +601,7 @@ body   {
 
 
 .gallery  {
-    display: grid;
     grid-template-rows: 1fr 3fr;
-    margin-bottom: 100px;
 }
 
 .gallery-header  {
@@ -1060,8 +1058,7 @@ body   {
 
 .gallery  {
     grid-template-rows: 1fr 3fr;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .gallery-header  {
