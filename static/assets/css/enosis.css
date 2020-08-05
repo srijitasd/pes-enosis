@@ -225,18 +225,17 @@ body   {
 
 /* tournament section for pc starts */
 
-.tournament-container  {
+.tournament-container, .achievenent-container  {
     height: 100vh;
     position: relative;
     overflow: visible;
     z-index: -1;
     display: grid;
-    grid-gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
 }
 
-.tournament-container::before {
+.achievenent-container::before {
     content: "";
     height: 125%;
     width: 100%;
@@ -251,21 +250,21 @@ body   {
 .tour-header  {
     grid-row: 1/2;
     align-self: center;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
     position: relative;
     color: #03045E;
     left: 90px;
-    padding-left: 2vw;
+    padding-left: 0.5rem;
     border-left: 0.75rem solid #155BAD;
     
 }
 
 .tournament-section  {
     grid-row: 2/3;
-    margin-left: 3.2rem;
-    margin-right: 4.5rem;
+    margin-left: 3rem;
+    margin-right: 4.1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -296,7 +295,7 @@ body   {
     font-family: sans-serif;
     font-weight: bold;
     background-color: rgba(2, 62,138, 0.6);
-    font-size: 2.2rem;
+    font-size: 2.5vw;
     padding: 25px;
 }
 
@@ -310,31 +309,30 @@ body   {
 .blog-section   {
     height: 100vh;
     display: grid;
-    grid-gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr 1fr;
     margin-bottom: 20px;
 }
 
 .blog-section-heading  {
     align-self: center;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
     color: #03045E;
     position: relative;
     left: 90px;
-    padding-left: 2vw;
+    padding-left: 0.5rem;
     border-left: 0.75rem solid #155BAD;
 }
 
 .blogs-container  {
     margin-left: 3.2rem;
-    margin-right: 4.5rem;
+    margin-right: 4.25rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 10px;
     padding-bottom: 5px;
 }
 
@@ -368,7 +366,7 @@ body   {
     background-color: rgba(2, 62,138, 0.6);
     text-align: center;
     font-family: sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6vw;
     font-weight: bold;
     text-transform: uppercase;
     padding: 12.5px;
@@ -411,7 +409,7 @@ body   {
 .blog-heading  {
     grid-row: 2/3;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     font-weight: bold;
     text-transform: uppercase;
     font-family: sans-serif;
@@ -424,7 +422,7 @@ body   {
 .blog-text  {
     grid-row: 3/4;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.7vw;
     background-color: #023E8a;
     text-align: center;
     padding: 5px;
@@ -439,7 +437,7 @@ body   {
 .about-us  {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 10px;
     grid-template-rows: 1fr 5fr 6fr;
 }
 
@@ -457,13 +455,13 @@ body   {
 .about-us-header  {
     grid-row: 1/2;
     align-self: center;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
     position: relative;
     color: #03045E;
     left: 90px;
-    padding-left: 2vw;
+    padding-left: 0.5rem;
     border-left: 0.75rem solid #155BAD;
 }
 
@@ -514,10 +512,9 @@ body   {
 
 .hall-of-fame  {
     margin-top: 100px;
-    height: auto;
+    height: 100vh;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr 1fr;
     grid-template-columns: 1fr;
 }
 
@@ -535,8 +532,7 @@ body   {
 .hof-header  {
     grid-row: 1/2;
     justify-self: center;
-    align-self: center;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
     color: #03045E;
@@ -546,18 +542,17 @@ body   {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
-    grid-gap: 1rem;
+    grid-gap: 5px;
 }
 
 .inter-grp-tour  {
     grid-row: 1/2;
     align-self: flex-end;
     justify-self: center;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-family: sans-serif;
     font-weight: bold;
-    color: white;
-    text-shadow: 0px 5px 5px rgb(3, 4, 94, 0.5);
+    color: #CAF0F8;
 }
 
 .grp-winners  {
@@ -566,7 +561,7 @@ body   {
     grid-template-areas: "third first second";
     height: auto;
     margin-left: 3.5rem;
-    margin-right: 4.5rem;
+    margin-right: 4.25rem;
 }
 
 .cards  {
@@ -574,22 +569,25 @@ body   {
 }
 
 .cards img {
-    height: 25vw;
-    width: 20vw;
+    height: 250px;
+    width: 200px;
     align-self: center;
 }
 
 .cards h3  {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 1rem;
     font-family: sans-serif;
     font-weight: bold;
-    color: #03045E;
-    text-shadow: 0px 3px 5px white;
+    color: #21239c;
 }
 
-.first  {
-    margin-top: 5vw;
+.second  {
+    margin-top: 4rem;
+}
+
+.third  {
+    margin-top: 8rem;
 }
 
 
@@ -608,19 +606,19 @@ body   {
 .gallery-header  {
     grid-row: 1/2;
     align-self: center;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-family: sans-serif;
     font-weight: bold;
     position: relative;
     color: #03045E;
     left: 90px;
-    padding-left: 2vw;
+    padding-left: 0.5rem;
     border-left: 0.75rem solid #155BAD;
 }
 
 .gallery-container  {
     height: 80vh;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-left: 4.5rem;
     margin-right: 3.2rem;
     overflow: hidden;
@@ -705,7 +703,7 @@ body   {
 .footer-list a  {
     text-decoration: none;
     color: white;
-    font-size: 2.4rem;
+    font-size: 3.5vw;
     text-align: center;
     font-weight: bold;
     padding-bottom: 10px;
@@ -729,7 +727,7 @@ body   {
 .copyright  {
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.5vw;
     font-family: sans-serif;
     align-self: flex-end;
     line-height: 12vh;
@@ -803,12 +801,12 @@ body   {
     /* tournament section for mobile starts */
 
 
-    .tournament-container  {
+    .tournament-container, .achievenent-container  {
         height: 50vh;
-        grid-template-rows: 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 4fr 1fr;
     }
 
-    .tournament-container::before {
+    .achievenent-container::before {
         content: "";
         height: 65vh;
         top: -15vh;
@@ -820,15 +818,18 @@ body   {
     }
 
     .tour-header  {
-        font-size: 1.2rem;
+        font-size: 1.75rem;
         left: 35px;
         
     }
 
     .tournament-section  {
         grid-gap: 10px;
-        margin-left: 2.2rem;
-        margin-right: 2.7rem;
+        margin-left: 0rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .tour-box  {
@@ -846,7 +847,7 @@ body   {
     }
 
     .tournament-title  {
-        font-size: 1rem;
+        font-size: 3.75vw;
         padding: 10px;
     }
 
@@ -864,13 +865,13 @@ body   {
 
 .blog-section-heading  {
     align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     left: 35px;
 }
 
 .blogs-container  {
-    margin-left: 2.2rem;
-    margin-right: 2.7rem;
+    margin-left: 2rem;
+    margin-right: 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -897,7 +898,7 @@ body   {
     color: white;
     background-color: rgba(2, 49, 110, 0.801);
     padding: 3px;
-    font-size: 0.5rem;
+    font-size: 2vw;
     padding-top: 5px;
 }
 
@@ -927,7 +928,7 @@ body   {
 }
 
 .blog-heading {
-    font-size: 0.5rem;
+    font-size: 2vw;
     background-color: rgba(2, 49, 110, 0.801);
     padding: 3px;
     padding-top: 7.5px;
@@ -944,8 +945,7 @@ body   {
 /* about us section starts for mobile */
 
 .about-us  {
-    display: grid;
-    grid-gap: 1rem;
+    grid-gap: 0px;
     grid-template-rows: 1fr 48vw 5fr;
     margin-bottom: 20px;
 }
@@ -964,7 +964,7 @@ body   {
 
 .about-us-header  {
     align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     left: 35px;
 }
 
@@ -972,8 +972,8 @@ body   {
     display: grid;
     grid-template-columns: 3fr 4fr;
     grid-template-rows: 1fr;
-    margin-left: 2.2rem;
-    margin-right: 2.7rem;
+    margin-left: 2rem;
+    margin-right: 2.5rem;
 }
 
 
@@ -991,7 +991,7 @@ body   {
     margin-right: 2.7rem;
     font-family: sans-serif;
     color: #03045E;
-    font-size: 0.7rem;
+    font-size: 3.2vw;
     margin-top: 5vw;
 
 }
@@ -1014,7 +1014,7 @@ body   {
 }
 
 .hof-header  {
-    font-size: 1.2rem;
+    font-size: 6vw;
     text-shadow: 0px 2px 5px white;
 }
 
@@ -1024,14 +1024,12 @@ body   {
 
 .inter-grp-tour  {
     align-self: center;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    text-shadow: 0px 2px 5px rgba(3, 4, 94, 0.5);
+    font-size: 1.5rem;
 }
 
 .grp-winners  {
     margin-left: 2.2em;
-    margin-right: 2.7rem;
+    margin-right: 2rem;
 }
 
 .cards img {
@@ -1041,15 +1039,11 @@ body   {
 
 .cards h3  {
     text-align: center;
-    font-size: 1rem;
+    font-size: 4.5vw;
     font-family: sans-serif;
     font-weight: bold;
     color: #03045E;
     text-shadow: 0px 3px 5px white;
-}
-
-.first  {
-    margin-top: 5vw;
 }
 
 /* hall of fame section ends for mobile */
@@ -1065,22 +1059,21 @@ body   {
 
 .gallery-header  {
     align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     left: 35px;
 }
 
 .gallery-container  {
     height: 45vh;
     margin-top: 20px;
-    margin-left: 2.2rem;
-    margin-right: 2.7rem;
+    margin-left: 1.2rem;
+    margin-right: 2rem;
 }
 
 
 .image-container  {
     column-count: 2;
     column-gap: 0.5rem;
-    padding: 0rem;
 }
 
 .image-container img  {
@@ -1091,7 +1084,7 @@ body   {
 
 .gallery-activator  {
     margin-left: 2.2rem;
-    margin-right: 2.7rem;
+    margin-right: 3rem;
 }
 
 .activate-button img  {
@@ -1118,7 +1111,7 @@ body   {
 }
 
 .footer-list a  {
-    font-size: 1rem;
+    font-size: 4.2vw;
     font-weight: bold;
 }
 
@@ -1131,7 +1124,7 @@ body   {
 }
 
 .copyright  {
-    font-size: 0.6rem;
+    font-size: 3vw;
     line-height: 8vh;
     margin-left: 2.2rem;
 }
