@@ -132,21 +132,6 @@ if ($(window).width() > 767) {
     })
 /* social-box animation ends*/
 
-galleryBox.addEventListener("click", function(){
-    galleryBox.classList.toggle("active");
-    if (galleryBox.classList.contains("active")) {
-        gsap.to(".gallery-container", {
-            height: "auto",
-            duration: 2
-        })
-    }
-    else {
-    gsap.to(".gallery-container", {
-        height: "80vh",
-        duration: 2
-    })
-}
-})
 
 }
     
@@ -176,20 +161,4 @@ if ($(window).width() <= 767) {
         }
     })
  
-    
-    galleryBox.addEventListener("click", function(){
-        galleryBox.classList.toggle("active");
-        if (galleryBox.classList.contains("active")) {
-            gsap.to(".gallery-container", {
-                height: "auto",
-                duration: 2
-            })
-        }
-        else {
-        gsap.to(".gallery-container", {
-            height: "45vh",
-            duration: 2
-        })
-    }
-    })
 }
