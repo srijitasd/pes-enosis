@@ -511,7 +511,7 @@ body   {
 
 
 .hall-of-fame  {
-    margin-top: 100px;
+    margin-top: 50px;
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
@@ -569,14 +569,14 @@ body   {
 }
 
 .cards img {
-    height: 250px;
-    width: 200px;
+    height: 20rem;
+    width: 16rem;
     align-self: center;
 }
 
 .cards h3  {
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: sans-serif;
     font-weight: bold;
     color: #21239c;
@@ -587,11 +587,21 @@ body   {
 }
 
 .third  {
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .see-more  {
     text-align: center;
+}
+
+.see-more a  {
+    font-size: 2rem;
+    color: #21239c;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 0.2rem solid #155BAD;
 }
 
 
@@ -805,6 +815,9 @@ body   {
 
     /* tournament section for mobile starts */
 
+    .tournament-container  {
+        margin-top: 50px;
+    }
 
     .tournament-container, .achievenent-container  {
         height: 50vh;
@@ -823,16 +836,15 @@ body   {
     }
 
     .tour-header  {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         left: 35px;
         
     }
 
     .tournament-section  {
         grid-gap: 10px;
-        margin-left: 0rem;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
@@ -865,12 +877,12 @@ body   {
 
 .blog-section  {
     height: 70vw;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .blog-section-heading  {
     align-self: center;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     left: 35px;
 }
 
@@ -952,7 +964,7 @@ body   {
 .about-us  {
     grid-gap: 0px;
     grid-template-rows: 1fr 48vw 5fr;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .about-us::before  {
@@ -969,7 +981,7 @@ body   {
 
 .about-us-header  {
     align-self: center;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     left: 35px;
 }
 
@@ -1007,8 +1019,9 @@ body   {
 /* hall of fame section starts for mobile */
 
 .hall-of-fame  {
-    margin-top: 50px;
+    margin-top: 20px;
     height: auto;
+    grid-template-rows: 1fr 5fr 1fr;
 }
 
 .hall-of-fame::before  {
@@ -1019,7 +1032,7 @@ body   {
 }
 
 .hof-header  {
-    font-size: 6vw;
+    font-size: 1.5rem;
     text-shadow: 0px 2px 5px white;
 }
 
@@ -1029,7 +1042,7 @@ body   {
 
 .inter-grp-tour  {
     align-self: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .grp-winners  {
@@ -1038,17 +1051,29 @@ body   {
 }
 
 .cards img {
-    height: 32vw;
-    width: 25vw;
+    height: 7.5rem;
+    width: 5.5rem;
 }
 
 .cards h3  {
+    font-size: 1rem;
+}
+
+.second  {
+    margin-top: 1.5rem;
+}
+
+.third  {
+    margin-top: 1.5rem;
+}
+
+.see-more  {
     text-align: center;
-    font-size: 4.5vw;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: #03045E;
-    text-shadow: 0px 3px 5px white;
+    align-self: center;
+}
+
+.see-more a  {
+    font-size: 1.2rem;
 }
 
 /* hall of fame section ends for mobile */
