@@ -46,3 +46,12 @@ $(document).ready(function(){
         }})
     })
 })
+
+$(document).ready(function(){
+    $('#item6').on('click', function(){
+        $(this).addClass('active');
+        $.ajax({url: "tournament6.html", success: function(result){
+            $('.container').html(result);
+        }})
+    })
+})
